@@ -9,12 +9,12 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-[100svh] md:min-h-screen bg-gradient-hero overflow-hidden">
-      {/* Hero Background Image with Fade */}
+      {/* Hero background image for desktop */}
       <div className="absolute inset-0 overflow-hidden">
         <img 
           src={heroImage} 
           alt="Columbus Awung speaking" 
-          className="hidden md:block absolute right-0 top-[40%] -translate-y-1/2 w-[80%] h-auto object-contain -scale-x-100 opacity-90"
+          className="hidden md:block absolute right-0 top-[42%] -translate-y-1/2 w-[78%] h-auto object-contain -scale-x-100 opacity-90"
           style={{
             maskImage: 'radial-gradient(ellipse 90% 80% at 60% 50%, black 40%, transparent 75%)',
             WebkitMaskImage: 'radial-gradient(ellipse 90% 80% at 60% 50%, black 40%, transparent 75%)',
@@ -46,32 +46,40 @@ const HeroSection = () => {
           </div>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-gold-50 leading-tight mb-5 sm:mb-6">
-            Taking You From{" "}
-            <span className="text-gradient-gold">Where You Are</span>{" "}
-            To Where You Should Be
+            Train for{" "}
+            <span className="text-gradient-gold">effective ministry</span>
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl text-gold-100/75 max-w-xl mx-auto lg:mx-0 mb-7 sm:mb-8 leading-relaxed">
-            Rhema Fits Bible College offers transformative education through 
-            Certificate, Diploma, Degree, and Masters programs designed to equip 
-            you for impactful ministry.
+            Practical Bible training in flexible programs built for your calling.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 md:mb-12">
             <Button variant="hero" size="xl" onClick={() => navigate("/register")}>
-              Start Your Journey
+              Apply Now
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl" onClick={() => navigate("/programs/certificate")}>
               <Play className="w-5 h-5" />
-              Explore Programs
+              View Programs
             </Button>
+          </div>
+
+          {/* Mobile hero image */}
+          <div className="md:hidden flex justify-center mb-8">
+            <div className="w-full max-w-xs rounded-3xl overflow-hidden border border-gold-400/20 bg-white/5 backdrop-blur-sm shadow-xl">
+              <img
+                src={heroImage}
+                alt="Columbus Awung speaking"
+                className="w-full h-[280px] object-cover object-top"
+              />
+            </div>
           </div>
 
         </div>
       </div>
 
-      {/* Program Cards at Bottom */}
+      {/* Program cards */}
       <div className="relative mt-2 md:mt-0 md:absolute md:bottom-20 md:left-0 md:right-0 z-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
@@ -140,7 +148,7 @@ const ProgramCard = ({
   
   return (
     <div 
-      className="group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 md:p-5 hover:from-white/25 hover:to-white/10 hover:border-gold-400/40 hover:scale-[1.03] transition-all duration-300 cursor-pointer animate-fade-up shadow-lg hover:shadow-gold-500/20"
+      className="group relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-4 md:p-5 hover:from-white/25 hover:to-white/10 hover:border-gold-400/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer animate-fade-up shadow-lg hover:shadow-gold-500/20"
       style={{ animationDelay: delay }}
       onClick={() => navigate(href)}
     >
@@ -153,7 +161,7 @@ const ProgramCard = ({
         </div>
         <h3 className="text-base md:text-lg font-serif font-bold text-gold-50 mb-1">{title}</h3>
         <p className="text-gold-400 text-xs font-semibold mb-1">{duration}</p>
-        <p className="text-gold-100/60 text-xs hidden md:block">{description}</p>
+        <p className="text-gold-100/60 text-xs">{description}</p>
       </div>
       
       {/* Arrow indicator */}

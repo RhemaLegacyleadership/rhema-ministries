@@ -4,42 +4,42 @@ import { ArrowRight, Clock, BookOpen } from "lucide-react";
 
 const programs = [
   {
-    title: "Certificate in Theology",
+    title: "Certificate",
     duration: "6 Months",
     credits: 30,
     tuition: "60,000 frs CFA",
-    description: "A foundational program for those beginning their ministry journey. Perfect for church workers and aspiring ministers.",
-    features: ["Introduction to Theology", "Bible Study Methods", "Christian Leadership Basics", "Ministry Ethics"],
+    description: "Foundational Bible and ministry training.",
+    highlights: ["Bible basics", "Leadership essentials"],
     href: "/programs/certificate",
     color: "from-emerald-500 to-teal-600"
   },
   {
-    title: "Diploma in Theology and Ministry",
+    title: "Diploma",
     duration: "6 Months",
     credits: 60,
     tuition: "180,000 frs CFA",
-    description: "An intermediate program providing deeper theological understanding and practical ministry skills.",
-    features: ["Advanced Biblical Studies", "Pastoral Care", "Church Administration", "Homiletics"],
+    description: "Deeper theology and practical ministry skills.",
+    highlights: ["Pastoral care", "Church systems"],
     href: "/programs/diploma",
     color: "from-blue-500 to-indigo-600"
   },
   {
-    title: "Bachelor's Degree Program",
+    title: "Degree",
     duration: "18 Months",
     credits: 120,
     tuition: "600,000 frs CFA",
-    description: "A comprehensive undergraduate program for serious students pursuing full-time ministry careers.",
-    features: ["Mission/Evangelism", "Christian Education", "Pastoral Care", "Biblical Studies"],
+    description: "Comprehensive training for full-time ministry.",
+    highlights: ["Mission focus", "Biblical depth"],
     href: "/programs/degree",
     color: "from-purple-500 to-violet-600"
   },
   {
-    title: "Master's Degree Program",
+    title: "Masters",
     duration: "15 Months",
     credits: 64,
     tuition: "640,000 frs CFA",
-    description: "An advanced program for ministry leaders seeking expert-level knowledge and leadership skills.",
-    features: ["Mission/Evangelism", "Christian Education", "Pastoral Care", "Biblical Studies"],
+    description: "Advanced leadership and ministry formation.",
+    highlights: ["Strategic leadership", "Advanced theology"],
     href: "/programs/masters",
     color: "from-gold-500 to-amber-600"
   }
@@ -49,14 +49,14 @@ const ProgramsSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-12 lg:py-20 bg-muted/30">
+    <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-foreground mb-6">
-            Our <span className="text-gradient-gold">Programs</span>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-foreground mb-4">
+            Explore our <span className="text-gradient-gold">Programs</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Choose the program that best fits your calling and schedule. Each program is designed to transform your ministry potential.
+          <p className="text-base sm:text-lg text-muted-foreground">
+            Four clear pathways built for ministry growth.
           </p>
         </div>
 
@@ -70,8 +70,13 @@ const ProgramsSection = () => {
               {/* Header with gradient */}
               <div className={`h-3 bg-gradient-to-r ${program.color}`} />
               
-              <div className="p-8">
-                <h3 className="text-2xl font-serif font-bold text-foreground mb-3">{program.title}</h3>
+              <div className="p-6 lg:p-7">
+                <div className="flex items-start justify-between gap-4 mb-2">
+                  <h3 className="text-2xl font-serif font-bold text-foreground">{program.title}</h3>
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-muted text-muted-foreground">
+                    {program.tuition}
+                  </span>
+                </div>
                 
                 <div className="flex flex-wrap gap-4 mb-4">
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -87,9 +92,9 @@ const ProgramsSection = () => {
                 <p className="text-muted-foreground mb-6">{program.description}</p>
 
                 <div className="mb-6">
-                  <p className="text-sm font-medium text-foreground mb-3">Key Courses:</p>
+                  <p className="text-sm font-medium text-foreground mb-3">Highlights</p>
                   <div className="flex flex-wrap gap-2">
-                    {program.features.map((feature) => (
+                    {program.highlights.map((feature) => (
                       <span key={feature} className="px-3 py-1 rounded-full bg-muted text-muted-foreground text-sm">
                         {feature}
                       </span>
