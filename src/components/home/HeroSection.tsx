@@ -8,22 +8,22 @@ const HeroSection = () => {
   const admissionsYear = new Date().getFullYear();
 
   return (
-    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-[100svh] md:min-h-screen bg-gradient-hero overflow-hidden">
       {/* Hero Background Image with Fade */}
       <div className="absolute inset-0 overflow-hidden">
         <img 
           src={heroImage} 
           alt="Columbus Awung speaking" 
-          className="absolute right-0 top-[40%] -translate-y-1/2 w-[80%] h-auto object-contain -scale-x-100 opacity-90"
+          className="hidden md:block absolute right-0 top-[40%] -translate-y-1/2 w-[80%] h-auto object-contain -scale-x-100 opacity-90"
           style={{
             maskImage: 'radial-gradient(ellipse 90% 80% at 60% 50%, black 40%, transparent 75%)',
             WebkitMaskImage: 'radial-gradient(ellipse 90% 80% at 60% 50%, black 40%, transparent 75%)',
           }}
         />
         {/* Gradient overlays for fade effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-800 via-burgundy-800/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-800 via-burgundy-800/80 md:via-burgundy-800/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-burgundy-800 via-transparent to-burgundy-800/50" />
-        <div className="absolute inset-0 bg-gradient-to-l from-burgundy-800/40 to-transparent" />
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-l from-burgundy-800/40 to-transparent" />
       </div>
 
       {/* Background Pattern */}
@@ -34,10 +34,10 @@ const HeroSection = () => {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute top-20 right-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl" />
+      <div className="hidden md:block absolute bottom-20 left-10 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 pt-32 pb-48 lg:pt-40 lg:pb-56 relative z-10">
+      <div className="container mx-auto px-4 pt-24 pb-14 sm:pt-28 sm:pb-16 md:pt-32 md:pb-48 lg:pt-40 lg:pb-56 relative z-10">
         {/* Main Content - Centered */}
         <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left animate-fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6">
@@ -45,19 +45,19 @@ const HeroSection = () => {
             <span className="text-gold-300 text-sm font-medium">{`Admissions Open for ${admissionsYear}`}</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-gold-50 leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-gold-50 leading-tight mb-5 sm:mb-6">
             Taking You From{" "}
             <span className="text-gradient-gold">Where You Are</span>{" "}
             To Where You Should Be
           </h1>
           
-          <p className="text-lg lg:text-xl text-gold-100/70 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-gold-100/75 max-w-xl mx-auto lg:mx-0 mb-7 sm:mb-8 leading-relaxed">
             Rhema Fits Bible College offers transformative education through 
             Certificate, Diploma, Degree, and Masters programs designed to equip 
             you for impactful ministry.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 md:mb-12">
             <Button variant="hero" size="xl" onClick={() => navigate("/register")}>
               Start Your Journey
               <ArrowRight className="w-5 h-5" />
@@ -72,9 +72,9 @@ const HeroSection = () => {
       </div>
 
       {/* Program Cards at Bottom */}
-      <div className="absolute bottom-20 left-0 right-0 z-20">
+      <div className="relative mt-2 md:mt-0 md:absolute md:bottom-20 md:left-0 md:right-0 z-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
             <ProgramCard 
               title="Certificate" 
               duration="6 Months"
