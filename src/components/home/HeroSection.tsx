@@ -12,6 +12,15 @@ const HeroSection = () => {
       {/* Hero background image for desktop */}
       <div className="absolute inset-0 overflow-hidden">
         <img 
+          src={heroImage}
+          alt="Columbus Awung speaking"
+          className="md:hidden absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 w-[125%] h-auto object-cover -scale-x-100 opacity-80"
+          style={{
+            maskImage: "radial-gradient(ellipse 90% 85% at 50% 50%, black 42%, transparent 80%)",
+            WebkitMaskImage: "radial-gradient(ellipse 90% 85% at 50% 50%, black 42%, transparent 80%)",
+          }}
+        />
+        <img 
           src={heroImage} 
           alt="Columbus Awung speaking" 
           className="hidden md:block absolute right-0 top-[42%] -translate-y-1/2 w-[78%] h-auto object-contain -scale-x-100 opacity-90"
@@ -63,17 +72,6 @@ const HeroSection = () => {
               <Play className="w-5 h-5" />
               View Programs
             </Button>
-          </div>
-
-          {/* Mobile hero image */}
-          <div className="md:hidden flex justify-center mb-8">
-            <div className="w-full max-w-xs rounded-3xl overflow-hidden border border-gold-400/20 bg-white/5 backdrop-blur-sm shadow-xl">
-              <img
-                src={heroImage}
-                alt="Columbus Awung speaking"
-                className="w-full h-[280px] object-cover object-top"
-              />
-            </div>
           </div>
 
         </div>
