@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { isSupabaseConfigured, supabase } from "@/integrations/supabase/client";
 import { getAccessContext } from "@/lib/portal";
 import { getFriendlyAuthError } from "@/lib/auth-errors";
 
@@ -43,6 +43,12 @@ const Login = () => {
     setIsLoading(true);
 
     try {
+      if (!isSupabaseConfigured) {
+        throw new Error(
+          "Authentication is not configured for this deployment. Ask the site admin to set VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY."
+        );
+      }
+
       const { data, error } = await supabase.auth.signInWithPassword({
         email: email.trim().toLowerCase(),
         password,
