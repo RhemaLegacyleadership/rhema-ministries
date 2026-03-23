@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, BookOpen, Users, Award } from "lucide-react";
+import { ArrowRight, BookOpen, Users, Award } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpeg";
 
 const HeroSection = () => {
@@ -62,17 +61,6 @@ const HeroSection = () => {
           <p className="text-base sm:text-lg lg:text-xl text-gold-100/75 max-w-xl mb-7 sm:mb-8 leading-relaxed">
             Practical Bible training in flexible programs built for your calling.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start mb-8 sm:mb-10 md:mb-12">
-            <Button variant="hero" size="xl" onClick={() => navigate("/register")}>
-              Apply Now
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button variant="heroOutline" size="xl" onClick={() => navigate("/programs/certificate")}>
-              <Play className="w-5 h-5" />
-              View Programs
-            </Button>
-          </div>
 
         </div>
       </div>
