@@ -14,7 +14,7 @@ const HeroSection = () => {
         <img 
           src={heroImage}
           alt="Columbus Awung speaking"
-          className="md:hidden absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 w-[125%] h-auto object-cover -scale-x-100 opacity-80"
+          className="md:hidden absolute left-1/2 top-[54%] -translate-x-1/2 -translate-y-1/2 w-[120%] h-auto object-cover -scale-x-100 opacity-85"
           style={{
             maskImage: "radial-gradient(ellipse 90% 85% at 50% 50%, black 42%, transparent 80%)",
             WebkitMaskImage: "radial-gradient(ellipse 90% 85% at 50% 50%, black 42%, transparent 80%)",
@@ -30,7 +30,7 @@ const HeroSection = () => {
           }}
         />
         {/* Gradient overlays for fade effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-800 via-burgundy-800/80 md:via-burgundy-800/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-burgundy-800 via-burgundy-800/82 md:via-burgundy-800/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-burgundy-800 via-transparent to-burgundy-800/50" />
         <div className="hidden md:block absolute inset-0 bg-gradient-to-l from-burgundy-800/40 to-transparent" />
       </div>
@@ -46,9 +46,9 @@ const HeroSection = () => {
       <div className="hidden md:block absolute top-20 right-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl" />
       <div className="hidden md:block absolute bottom-20 left-10 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 pt-24 pb-14 sm:pt-28 sm:pb-16 md:pt-32 md:pb-48 lg:pt-40 lg:pb-56 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 pt-24 pb-14 sm:pt-28 sm:pb-16 md:pt-32 md:pb-48 lg:pt-40 lg:pb-56 relative z-10">
         {/* Main Content - Centered */}
-        <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left animate-fade-up">
+        <div className="max-w-3xl mx-auto lg:mx-0 text-left animate-fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-400/10 border border-gold-400/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
             <span className="text-gold-300 text-sm font-medium">{`Admissions Open for ${admissionsYear}`}</span>
@@ -59,11 +59,11 @@ const HeroSection = () => {
             <span className="text-gradient-gold">effective ministry</span>
           </h1>
           
-          <p className="text-base sm:text-lg lg:text-xl text-gold-100/75 max-w-xl mx-auto lg:mx-0 mb-7 sm:mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-gold-100/75 max-w-xl mb-7 sm:mb-8 leading-relaxed">
             Practical Bible training in flexible programs built for your calling.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8 sm:mb-10 md:mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-start mb-8 sm:mb-10 md:mb-12">
             <Button variant="hero" size="xl" onClick={() => navigate("/register")}>
               Apply Now
               <ArrowRight className="w-5 h-5" />
@@ -79,8 +79,8 @@ const HeroSection = () => {
 
       {/* Program cards */}
       <div className="relative mt-2 md:mt-0 md:absolute md:bottom-20 md:left-0 md:right-0 z-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
             <ProgramCard 
               title="Certificate" 
               duration="6 Months"

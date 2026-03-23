@@ -50,7 +50,7 @@ const ProgramsSection = () => {
 
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-foreground mb-4">
             Explore our <span className="text-gradient-gold">Programs</span>
@@ -60,7 +60,7 @@ const ProgramsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
           {programs.map((program, index) => (
             <div 
               key={program.title}
@@ -70,9 +70,9 @@ const ProgramsSection = () => {
               {/* Header with gradient */}
               <div className={`h-3 bg-gradient-to-r ${program.color}`} />
               
-              <div className="p-6 lg:p-7">
+              <div className="p-5 sm:p-6 lg:p-7">
                 <div className="flex items-start justify-between gap-4 mb-2">
-                  <h3 className="text-2xl font-serif font-bold text-foreground">{program.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground">{program.title}</h3>
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-muted text-muted-foreground">
                     {program.tuition}
                   </span>

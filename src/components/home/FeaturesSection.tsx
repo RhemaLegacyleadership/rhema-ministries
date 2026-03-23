@@ -26,7 +26,7 @@ const features = [
 const FeaturesSection = () => {
   return (
     <section className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-foreground mb-4">
             Why students choose <span className="text-gradient-gold">Rhema Fits</span>
@@ -40,7 +40,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="group p-6 lg:p-7 rounded-2xl bg-card border border-border hover:border-gold-400/50 hover:shadow-lg transition-all duration-300 animate-fade-up"
+              className="group p-5 sm:p-6 lg:p-7 rounded-2xl bg-card border border-border hover:border-gold-400/50 hover:shadow-lg transition-all duration-300 animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-burgundy-600 to-burgundy-700 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">

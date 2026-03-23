@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-burgundy-800 text-gold-50">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 py-14 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -24,7 +24,7 @@ const Footer = () => {
             <p className="text-gold-100/70 text-sm leading-relaxed mb-6">
               "Taking you from where you are to where you should be"
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-burgundy-700 hover:bg-gold-500 hover:text-burgundy-800 flex items-center justify-center transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -86,7 +86,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-burgundy-700">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 sm:px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gold-100/50 text-sm">
               © {new Date().getFullYear()} Rhema Fits Ministries. All rights reserved.

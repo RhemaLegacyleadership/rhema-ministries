@@ -11,7 +11,7 @@ const CTASection = () => {
       <div className="absolute top-0 right-0 w-80 h-80 bg-gold-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-56 h-56 bg-gold-500/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-400/10 mb-6">
             <GraduationCap className="w-8 h-8 text-gold-400" />
@@ -25,7 +25,7 @@ const CTASection = () => {
             Apply today and start your next step in ministry leadership.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button variant="hero" size="xl" onClick={() => navigate("/register")}>
               Apply for Admission
               <ArrowRight className="w-5 h-5" />
