@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Rhema Fits Bible College — Design System
+   Burgundy (heritage) · Gold (calling) · Warm parchment neutrals
+   Typography: Cinzel (brand) · Cormorant Garamond (display) · Figtree (body)
+*/
+@layer base {
+  :root {
+    --background: 28 28% 97%;
+    --foreground: 345 38% 14%;
+
+    --card: 30 40% 99%;
+    --card-foreground: 345 38% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 345 38% 14%;
+
+    --primary: 345 52% 28%;
+    --primary-foreground: 42 90% 96%;
+
+    --secondary: 42 72% 52%;
+    --secondary-foreground: 345 38% 12%;
+
+    --muted: 30 22% 93%;
+    --muted-foreground: 345 12% 42%;
+
+    --accent: 38 88% 48%;
+    --accent-foreground: 345 38% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 18% 86%;
+    --input: 30 18% 86%;
+    --ring: 345 52% 28%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 345 50% 18%;
+    --sidebar-foreground: 40 30% 96%;
+    --sidebar-primary: 42 72% 52%;
+    --sidebar-primary-foreground: 345 38% 10%;
+    --sidebar-accent: 345 45% 24%;
+    --sidebar-accent-foreground: 40 30% 96%;
+    --sidebar-border: 345 40% 28%;
+    --sidebar-ring: 42 72% 52%;
+
+    --gradient-burgundy: linear-gradient(145deg, hsl(345, 52%, 28%) 0%, hsl(338, 48%, 18%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42, 78%, 58%) 0%, hsl(36, 88%, 46%) 100%);
+    --gradient-hero: linear-gradient(165deg, hsl(345, 48%, 12%) 0%, hsl(340, 42%, 20%) 55%, hsl(335, 40%, 16%) 100%);
+    --gradient-card: linear-gradient(160deg, hsl(30, 40%, 99%) 0%, hsl(28, 28%, 95%) 100%);
+    --gradient-wine: linear-gradient(135deg, hsl(338, 48%, 32%) 0%, hsl(345, 52%, 22%) 100%);
+    --gradient-crimson: linear-gradient(135deg, hsl(355, 55%, 38%) 0%, hsl(345, 52%, 26%) 100%);
+
+    --shadow-soft: 0 8px 28px -10px hsla(345, 40%, 20%, 0.14);
+    --shadow-medium: 0 16px 40px -14px hsla(345, 40%, 18%, 0.2);
+    --shadow-gold: 0 8px 28px -8px hsla(42, 78%, 48%, 0.35);
+
+    --success: 152 55% 32%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 88% 48%;
+    --warning-foreground: 345 38% 10%;
+    --info: 200 70% 42%;
+    --info-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 345 40% 7%;
+    --foreground: 40 25% 95%;
+    --card: 345 35% 11%;
+    --card-foreground: 40 25% 95%;
+    --popover: 345 35% 11%;
+    --popover-foreground: 40 25% 95%;
+    --primary: 42 72% 52%;
+    --primary-foreground: 345 38% 10%;
+    --secondary: 345 40% 26%;
+    --secondary-foreground: 40 25% 95%;
+    --muted: 345 30% 16%;
+    --muted-foreground: 345 12% 62%;
+    --accent: 38 88% 48%;
+    --accent-foreground: 345 38% 10%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 345 28% 18%;
+    --input: 345 28% 18%;
+    --ring: 42 72% 52%;
+    --sidebar-background: 345 42% 5%;
+    --sidebar-foreground: 40 25% 95%;
+    --sidebar-primary: 42 72% 52%;
+    --sidebar-primary-foreground: 345 38% 10%;
+    --sidebar-accent: 345 35% 12%;
+    --sidebar-accent-foreground: 40 25% 95%;
+    --sidebar-border: 345 28% 14%;
+    --sidebar-ring: 42 72% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Figtree", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .font-brand {
+    font-family: "Cinzel", Georgia, serif;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(42, 78%, 58%) 0%, hsl(36, 88%, 46%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-burgundy {
+    background: var(--gradient-burgundy);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-wine {
+    background: var(--gradient-wine);
+  }
+
+  .bg-gradient-crimson {
+    background: var(--gradient-crimson);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .section-atmosphere {
+    background:
+      radial-gradient(ellipse 80% 50% at 10% 0%, hsla(42, 70%, 70%, 0.08), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 90% 100%, hsla(345, 40%, 40%, 0.06), transparent 50%),
+      hsl(var(--background));
+  }
+
+  .section-parchment {
+    background:
+      linear-gradient(180deg, hsl(28, 28%, 95%) 0%, hsl(28, 28%, 97%) 100%);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-ken-slow {
+    animation: kenSlow 28s ease-in-out infinite alternate;
+  }
+
+  .animate-reveal {
+    animation: reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes kenSlow {
+    from { transform: scale(1); }
+    to { transform: scale(1.06); }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      clip-path: inset(0 0 12% 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}
